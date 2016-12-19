@@ -67,14 +67,14 @@ gulp.task('push', function(){
         .add('./*')
         .commit("first commit")
         .addRemote('origin', json.repository.url)
-        .push('origin', 'master');
+        .push('origin', 'gh-pages');
     }
     else
     {
        git()
         .add('./*')
         .commit("Actualizando Gitbook.")
-        .push('origin', 'master');
+        .push('origin', 'gh-pages');
     }
 });
 
