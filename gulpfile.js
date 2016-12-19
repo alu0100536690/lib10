@@ -66,15 +66,15 @@ gulp.task('push', function(){
         .init()
         .add('./*')
         .commit("first commit")
-        .addRemote('origin', "hol")
-        .push('origin', 'gh-pages');
+        .addRemote('origin', json.repository.url)
+        .push(['-u', 'origin', 'gh-pages'], function () {});
     }
     else
     {
        git()
         .add('./*')
         .commit("Actualizando Gitbook.")
-        .push('origin', 'gh-pages');
+        .push(['-u', 'origin', 'gh-pages'], function () {});
     }
 });
 
