@@ -66,7 +66,7 @@ gulp.task('push', function(){
         .init()
         .add('./*')
         .commit("first commit")
-        .addRemote('origin', json.repository.url)
+        .addRemote('origin', "hol")
         .push('origin', 'gh-pages');
     }
     else
